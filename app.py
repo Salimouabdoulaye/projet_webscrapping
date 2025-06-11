@@ -582,10 +582,7 @@ def main():
         
         exemples = [
             ("Commentaire très positif", "Ce produit est absolument fantastique! Qualité exceptionnelle, livraison rapide, je recommande vivement. Parfait!"),
-            ("Commentaire négatif", "Très déçu de cet achat. La qualité n'est pas au rendez-vous, le produit est arrivé cassé et le service client ne répond pas."),
-            ("Commentaire neutre", "Le produit fait le travail pour lequel il est conçu. Rien d'exceptionnel mais correct pour le prix. Livraison dans les temps."),
-            ("Commentaire mitigé", "Bon produit dans l'ensemble mais quelques défauts mineurs. Le rapport qualité-prix est correct sans plus."),
-            ("Commentaire enthousiaste", "EXCELLENT ! Dépassé mes attentes ! Qualité premium, service parfait, je rachèterais sans hésiter !")
+            ("Commentaire négatif", "Très déçu de cet achat. La qualité n'est pas au rendez-vous, le produit est arrivé cassé et le service client ne répond pas.")
         ]
         
         for titre, texte in exemples:
