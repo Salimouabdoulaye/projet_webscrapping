@@ -212,7 +212,7 @@ def find_model_files():
     
     # Chercher le fichier de métadonnées correspondant
     timestamp = str(latest_model).split('_')[-1].replace('.pkl', '')
-    metadata_file = f'metadata_amazon.json'
+    metadata_file = f'metadata_amazon_fr_{timestamp}.json'
     
     return str(latest_model), metadata_file, timestamp
 
@@ -332,8 +332,7 @@ def display_prediction(prediction, probabilities=None):
                            text='Probabilité')
                 
                 fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-                fig.update_layout(showlegend=False, height=400)
-                fig.update_yaxis(range=[0, 100])
+                fig.update_layout(showlegend=False, height=400, yaxis=dict(range=[0, 100]))
                 st.plotly_chart(fig, use_container_width=True)
             
             with col2:
@@ -388,12 +387,12 @@ def main():
     """
     
     # Header
-    st.markdown('<h1 class="main-header">Analyseur de commentaires Amazon</h1>', 
+    st.markdown('<h1 class="main-header">Analyseur de Sentiments Amazon France</h1>', 
                 unsafe_allow_html=True)
     
     st.markdown("""
     <div style="text-align: center; margin-bottom: 2rem; color: #666;">
-        Analysez le sentiment de vos commentaires clients Amazon avec notre outil
+        Analysez le sentiment de vos commentaires clients Amazon avec notre IA spécialisée
     </div>
     """, unsafe_allow_html=True)
     
@@ -584,6 +583,9 @@ def main():
         exemples = [
             ("Commentaire très positif", "Ce produit est absolument fantastique! Qualité exceptionnelle, livraison rapide, je recommande vivement. Parfait!"),
             ("Commentaire négatif", "Très déçu de cet achat. La qualité n'est pas au rendez-vous, le produit est arrivé cassé et le service client ne répond pas."),
+            ("Commentaire neutre", "Le produit fait le travail pour lequel il est conçu. Rien d'exceptionnel mais correct pour le prix. Livraison dans les temps."),
+            ("Commentaire mitigé", "Bon produit dans l'ensemble mais quelques défauts mineurs. Le rapport qualité-prix est correct sans plus."),
+            ("Commentaire enthousiaste", "EXCELLENT ! Dépassé mes attentes ! Qualité premium, service parfait, je rachèterais sans hésiter !")
         ]
         
         for titre, texte in exemples:
@@ -601,7 +603,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style="text-align: center; color: #666; padding: 1rem;">
-        Analyseur de commentaires Amazon - Propulsé par Machine Learning
+        Analyseur de Sentiments Amazon France - Propulsé par Machine Learning
     </div>
     """, unsafe_allow_html=True)
 

@@ -1,0 +1,14 @@
+{
+  "model_name": "Logistic Regression",
+  "f1_score": 0.8341514985444043,
+  "accuracy": 0.8366013071895425,
+  "train_size": 1833,
+  "test_size": 459,
+  "features_count": 5000,
+  "classes": [
+    "neutre",
+    "positive",
+    "negatif"
+  ],
+  "timestamp": "20250611_021521"
+}
