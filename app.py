@@ -387,12 +387,12 @@ def main():
     """
     
     # Header
-    st.markdown('<h1 class="main-header">Analyseur de Sentiments Amazon France</h1>', 
+    st.markdown('<h1 class="main-header">Analyseur de commentaire Amazon</h1>', 
                 unsafe_allow_html=True)
     
     st.markdown("""
     <div style="text-align: center; margin-bottom: 2rem; color: #666;">
-        Analysez le sentiment de vos commentaires clients Amazon avec notre IA spécialisée
+        Analysez le sentiment de vos commentaires clients Amazon avec notre outil
     </div>
     """, unsafe_allow_html=True)
     
